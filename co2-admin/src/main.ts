@@ -2,6 +2,11 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { testCalculation } from './api/client';
+
+testCalculation()
+  .then(data => console.log('Test calc result:', data))
+  .catch(err => console.error(err));
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
